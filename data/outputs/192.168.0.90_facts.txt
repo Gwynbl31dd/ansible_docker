@@ -1,0 +1,35 @@
+### Begin interface summary ###
+1. GigabitEthernet1: up/up
+2. GigabitEthernet2: up/up
+3. GigabitEthernet3: administratively down/down
+4. GigabitEthernet4: administratively down/down
+5. Loopback0: up/up
+6. Tunnel100: up/up
+### End   interface summary ###
+### Begin output from command: show ip nhrp brief ###
+****************************************************************************
+    NOTE: Link-Local, No-socket and Incomplete entries are not displayed
+****************************************************************************
+Legend: Type --> S - Static, D - Dynamic
+        Flags --> u - unique, r - registered, e - temporary, c - claimed
+        a - authoritative, t - route
+============================================================================
+
+Intf     NextHop Address                                    NBMA Address
+         Target Network                              T/Flag
+-------- ------------------------------------------- ------ ----------------
+### End   output from command: show ip nhrp brief ###
+### Begin output from command: show ip ospf neighbor Tunnel100 ###
+
+### End   output from command: show ip ospf neighbor Tunnel100 ###
+### Begin output from command: show ip ospf interface Tunnel100 | begin Cryptographic ###
+Cryptographic authentication enabled
+    Sending SA: Key 1, Algorithm HMAC-SHA-256 - key chain KC_OSPF_AUTH
+### End   output from command: show ip ospf interface Tunnel100 | begin Cryptographic ###
+### Begin output from command: show ip ospf | include TTL|Reference ###
+Reference bandwidth unit is 1000 mbps
+ Strict TTL checking enabled
+### End   output from command: show ip ospf | include TTL|Reference ###
+### Begin output from command: show ip route ospf | begin ^Gateway ###
+Gateway of last resort is not set
+### End   output from command: show ip route ospf | begin ^Gateway ###

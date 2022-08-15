@@ -1,0 +1,10 @@
+---
+version: '3'
+
+services:
+  ansible:
+    container_name: ansible
+    build: .
+    volumes:
+    - "./data:/data"
+    command: tail -F anything
